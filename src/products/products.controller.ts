@@ -13,6 +13,7 @@ export class ProductsController {
     @Inject(PRODUCT_SERVICE) private readonly productsClient: ClientProxy
   ) {}
 
+  
   @Post()
   createProduct(@Body() createProductDto: CreateProductDto) {
     return this.productsClient.send({ cmd: 'create_product' }, createProductDto);

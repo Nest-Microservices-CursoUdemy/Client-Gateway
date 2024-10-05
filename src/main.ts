@@ -21,7 +21,8 @@ async function bootstrap() {
 
   await app.listen(envs.port);
   
-  logger.log(`Connecting to products Microservice on ${envs.productsMicroserviceHost}:${envs.productsMicroservicePort}`);
+  logger.log(`Connecting to PRODUCTS Microservice on ${envs.productsMicroserviceHost}:${envs.productsMicroservicePort}`);
+  logger.log(`Connecting to ORDERS Microservice on ${envs.ordersMicroserviceHost}:${envs.ordersMicroservicePort}`);
   logger.log(`GateWay is running on port: ${envs.port}`);
 }
 bootstrap();
